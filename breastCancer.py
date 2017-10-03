@@ -17,7 +17,7 @@ data = data.drop("Unnamed: 32",1)
 mapping = {'M' : 0, 'B' : 1}
 data['diagnosis'] = data['diagnosis'].map(mapping)
 features = list(data.columns[1:31]) # Appending all the columns in feature vector
-train_X, test_X, train_Y, test_Y = train_test_split(data[features], data['diagnosis'].values, test_size=0.30, random_state=42)
+train_X, test_X, train_Y, test_Y = train_test_split(data[features], data['diagnosis'].values, test_size=0.20, random_state=42)
 
 # Model
 model = Sequential()
